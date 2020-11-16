@@ -1,0 +1,22 @@
+@import "~igniteui-angular/lib/core/styles/themes/index";
+
+$custom-calendar-theme: igx-calendar-theme(
+    $header-background: transparent,
+    $content-background: #fdfdfd,
+    $header-text-color: #ffffff,
+    $date-current-text-color: transparent,
+    $picker-arrow-color: transparent,
+    $date-selected-text-color: #fdfdfd,
+    $date-current-bg-color: #fdfdfd,
+    $picker-arrow-hover-color: transparent,
+    $year-current-text-color: transparent,
+    $year-hover-text-color: transparent,
+    $month-current-text-color: transparent,
+    $month-hover-text-color: transparent,
+    $picker-text-color: transparent,
+    $picker-text-hover-color: transparent,
+);
+
+:host ::ng-deep {
+    @include igx-calendar($custom-calendar-theme);
+}

@@ -1,0 +1,82 @@
+<section class="jumbotron2">
+    <div class="container">
+        <h2>Stay in touch<small>Want to move...</small></h2>
+    </div>
+</section>
+
+<section class="content" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Leave a message</h2>
+                <form [formGroup]="contactFormGroup">
+                    <fieldset>
+                        <div class="row">
+                            <div class="form-group col-sm-12">
+                                <label for="name">Name:<span>*</span></label>
+                                <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter Name">
+                            </div>                               
+                        </div>
+                        
+                        <div class="row">
+                            <div class="form-group col-sm-12">
+                                <label for="email">Email Id:<span>*</span></label>
+                                <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter Email Id">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-sm-12">
+                                <label for="phone">Best Phone Number:<span>*</span></label>
+                                <input type="number" class="form-control" id="phone" formControlName="phone" placeholder="Enter Phone Number">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-12">
+                                <label for="email2">Subject:<span>*</span></label>
+                                <input type="text" class="form-control" id="subject" formControlName="subject" placeholder="Enter Subject">
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="form-group col-sm-12">
+                                <label for="message">Message:<span>*</span></label>
+                                <textarea class="form-control" id="message" formControlName="message" placeholder="Enter Message"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="form-group col-sm-12">
+                                <button class="btn btn-primary button-set" (click)="clear()"><i class="fa fa-refresh"></i>Clear</button>
+                                <button class="btn btn-primary button-set m-l-10" [disabled]="!contactFormGroup.valid" (click)="submit()"><i class="fa fa-check"></i>Submit</button>
+                                <span class="form-info"><span class="required">*</span> These fields are required</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <h2>Contact Us</h2>
+                <ul class="list-unstyled contact-address">
+                    <li><h3>Address</h3></li>
+                    <li>2214 FM1187 #9</li>
+                    <li>Mansfield, TX 76063</li><br>
+                    <li><h3>Contact</h3></li>
+                    <li>Absoluteintegritymovers@gmail.com</li>
+                    <li>Office - 817-253-3866</li>
+                    <li>JT - 817-823-4706(owner)</li>
+                    <li><h3>Opening Hours:</h3></li>
+                    <li>Mo-Fr: 8:00-5:00</li>
+                </ul>
+                <ul class="brands brands-md brands-inline brands-transition brands-circle main">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                </ul>
+            </div>
+        </div>            
+    </div>
+</section>

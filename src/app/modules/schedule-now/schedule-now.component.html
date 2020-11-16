@@ -1,0 +1,82 @@
+<section class="content overflow" id="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Schedule or book a slot</h2>
+                <igx-calendar class="igx-typography" width="50%" #calendar
+                    [locale]="locale"
+                    (onSelection)="onSelection($event)">
+                </igx-calendar>
+            </div>
+            <div class="col-sm-6 p-prcnt-20" *ngIf="showTimeSlot">
+                <div class="container">
+                    <div class="row p-10">
+                        <div class="col-sm-1">
+                            <button class="btn btn-primary button-set" [disabled]="firstSlot" (click)="timeSlot(09, 10)">09 - 10 AM</button>
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn btn-primary button-set" [disabled]="secondSlot" (click)="timeSlot(10, 11)">10 - 11 AM</button>
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn btn-primary button-set" [disabled]="thirdSlot" (click)="timeSlot(11, 12)">11 - 12 PM</button>
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn btn-primary button-set" [disabled]="fourthSlot" (click)="timeSlot(12, 13)">12 - 01 PM</button>
+                        </div>
+                    </div>
+                    <div class="row p-10">
+                        <div class="col-sm-1">
+                            <button class="btn btn-primary button-set" [disabled]="fifthSlot" (click)="timeSlot(13, 14)">01 - 02 PM</button>
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn btn-primary button-set" [disabled]="sixthSlot" (click)="timeSlot(14, 15)">02 - 03 PM</button>
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn btn-primary button-set" [disabled]="seventhSlot" (click)="timeSlot(15, 16)">03 - 04 PM</button>
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn btn-primary button-set" [disabled]="eightSlot" (click)="timeSlot(16, 17)">04 - 05 PM</button>
+                        </div>
+                    </div>
+                    <div class="row p-10">
+                        <div class="col-sm-1">
+                            <button class="btn btn-primary button-set" [disabled]="ninthSlot" (click)="timeSlot(17, 18)">05 - 06 PM</button>
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn btn-primary button-set" [disabled]="tenthSlot" (click)="timeSlot(18, 19)">06 - 07 PM</button>
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn btn-primary button-set" [disabled]="eleventSlot" (click)="timeSlot(19, 20)">07 - 08 PM</button>
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn btn-primary button-set" [disabled]="twelthSlot" (click)="timeSlot(20, 21)">08 - 09 PM</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-prcnt-3">
+        <div class="row">
+            <div class="col-sm-6">
+                <form [formGroup]="messageFormGroup">
+                    <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea type="text" class="form-control" id="message" formControlName="message" aria-label="Message" aria-describedby="textMessage" placeholder="Enter Message"></textarea>
+                      <small id="textMessage" class="form-text text-muted">Message should not be empty.</small>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <div class="container">
+                    <div class="row p-10 p-prcnt-3">
+                        <div class="col-sm-1">
+                            <button class="btn btn-primary button-set" [disabled]="!messageFormGroup.valid" (click)="submit()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

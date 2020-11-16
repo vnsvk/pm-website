@@ -1,0 +1,13 @@
+h3{
+    color:#8A4854;
+  }
+  h4{
+    /* font-weight: lighter; */
+    color:#666670;
+  }
+
+  div{
+      margin-left:100px;
+      /* font-family: Helvetica; */
+      margin-right:100px;
+  }

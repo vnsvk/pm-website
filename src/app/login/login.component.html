@@ -1,0 +1,28 @@
+<section class="login-wrapper" id="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title">Login</h2>
+                <form [formGroup]="loginForm">
+                    <fieldset>
+                        <div class="row">
+                            <div class="form-group col-sm-12">
+                                <label for="userName">User Name:<span>*</span></label>
+                                <input type="text" class="form-control" id="userName" formControlName="userName" placeholder="Enter User Name">
+                            </div>                               
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-12">
+                                <label for="password">Password:<span>*</span></label>
+                                <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter Password">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 center">
+                            <button class="btn btn-primary button-set" [disabled]="!loginForm.valid" (click)="login()"><i class="fa fa-check"></i>Login</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>            
+    </div>
+</section>

@@ -1,0 +1,48 @@
+<section class="content overflow" id="features" *ngIf="showCustomerDetails">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Customer Verification Form</h2>
+        <form class="basic-form" [formGroup]="existingCustomerFormGroup">
+          <fieldset>
+            <div class="row">
+              <div class="form-group col-sm-6">
+                <label for="mobile">Mobile Number:<span>*</span></label>
+                <input type="text" class="form-control" id="mobile" formControlName="mobile" placeholder="Enter Mobile Number">
+                <span style="color: red;" *ngIf="error">
+                  Invalid Mobile Number
+                </span>
+              </div>
+              <div class="col-sm-6 p-t-5">
+                <button class="btn btn-primary button-set" [disabled]="!existingCustomerFormGroup.valid" (click)="submit()"><i class="fa fa-check"></i>Submit</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="content overflow" id="features" *ngIf="showOTPDetails">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Customer Verification Form</h2>
+        <form class="basic-form" [formGroup]="otpFormGroup">
+          <fieldset>
+            <div class="row">
+              <div class="form-group col-sm-6">
+                <label for="otp">OTP:<span>*</span></label>
+                <input type="text" class="form-control" id="otp" formControlName="otp" placeholder="Enter OTP">
+              </div>
+              <div class="col-sm-6 p-t-5">
+                <button class="btn btn-primary button-set" [disabled]="!otpFormGroup.valid" (click)="verify()"><i class="fa fa-check"></i>Verify OTP</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section> -->

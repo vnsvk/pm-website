@@ -1,0 +1,91 @@
+<section class="content overflow" id="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Customer Details Form</h2>
+        <form class="basic-form" [formGroup]="newCustomerFormGroup">
+          <fieldset>
+            <div class="row">
+              <div class="form-group col-sm-6">
+                <label for="firstName">First Name:<span>*</span></label>
+                <input type="text" class="form-control" id="firstName" formControlName="firstName" placeholder="Enter First Name">
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="lastName">Last Name:<span>*</span></label>
+                <input type="text" class="form-control" id="lastName" formControlName="lastName" placeholder="Enter Last Name">
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="mobileNo">Mobile Number:<span>*</span></label>
+                <input type="text" class="form-control" id="mobileNo" formControlName="mobileNo" placeholder="Enter Mobile Number">
+              </div>                          
+            </div>
+            <div class="row">
+              <div class="form-group col-sm-6">
+                <label for="email">Email Id:<span>*</span></label>
+                <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter Email Id">
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="company">Company:<span>*</span></label>
+                <input type="text" class="form-control" id="company" formControlName="company" placeholder="Enter Company">
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="workPhone">Work Phone:</label>
+                <input type="text" class="form-control" id="workPhone" formControlName="workPhone" placeholder="Enter Work Phone Number">
+              </div>                       
+            </div>
+            <div class="row">
+              <div class="form-group col-sm-6">
+                <label for="customertype">Customer Type:</label>
+                <input type="text" class="form-control" id="customertype" formControlName="customertype" placeholder="Enter Customer Type">
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="houseNo">House Number:<span>*</span></label>
+                <input type="text" class="form-control" id="houseNo" formControlName="houseNo" placeholder="Enter House Number">
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="street">Street:<span>*</span></label>
+                <input type="text" class="form-control" id="street" formControlName="street" placeholder="Enter Street">
+              </div>                          
+            </div>
+            <div class="row">
+              <div class="form-group col-sm-6">
+                <label for="city">City:<span>*</span></label>
+                <input type="text" class="form-control" id="city" formControlName="city" placeholder="Enter City">
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="state">State:<span>*</span></label>
+                <select class="form-control" id="state" formControlName="state" placeholder="Select State">
+                  <option value="" selected disabled>Please select</option>
+                  <option *ngFor="let state of states" [value]="state">{{state}}</option>
+                </select>
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" class="form-control" id="jobTitle" formControlName="jobTitle" placeholder="Enter Job Title">
+              </div>                       
+            </div>
+            <div class="row">
+              <div class="form-group col-sm-6">
+                <label for="county">County:</label>
+                <input type="text" class="form-control" id="county" formControlName="county" placeholder="Enter County">
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="country">Country:<span>*</span></label>
+                <input type="text" class="form-control" id="country" formControlName="country" placeholder="Enter Country">
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="pincode">Pin Code:<span>*</span></label>
+                <input type="text" class="form-control" id="pincode" formControlName="pincode" placeholder="Enter Pin Code">
+              </div>                       
+            </div>
+            <div class="col-sm-6">
+              <button class="btn btn-primary button-set" (click)="clear()"><i class="fa fa-refresh"></i>Clear</button>
+              <button class="btn btn-primary button-set m-l-10" [disabled]="!newCustomerFormGroup.valid" (click)="submit(newCustomerFormGroup.value)"><i class="fa fa-check"></i>Submit</button>
+              <span class="form-info"><span class="required">*</span> These fields are required</span>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

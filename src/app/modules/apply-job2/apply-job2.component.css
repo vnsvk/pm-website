@@ -1,0 +1,39 @@
+.button-set {
+    border: none;
+}
+
+.m-l-10 {
+    margin-left: 10px;
+}
+
+h3{
+    color:#C2A197;
+}
+
+li{
+    color:#666666;
+}
+.box{
+    border:3px;
+    height:5px;
+    width:50%;
+}
+.button1{
+    border-color:#F9520B ;
+    /* border-radius: 20px;  */
+    background-color:#F9520B;
+    color: white;
+    width:20%;
+    height:40px;
+    /* margin-top:10px; */
+    margin-bottom:10px;
+}
+.form-control{
+    width: 80%;
+    height: 50px;
+}
+
+.container{
+    margin-left:80px;
+    margin-right:70px;
+}
